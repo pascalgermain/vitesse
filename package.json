@@ -3,7 +3,8 @@
   "private": true,
   "packageManager": "pnpm@8.11.0",
   "scripts": {
-    "build": "vite-ssg build",
+    "build:types": "vue-tsc --project ./tsconfig.declaration.json",
+    "build": "vite-ssg build && pnpm build:types",
     "dev": "vite --port 3333 --open",
     "lint": "eslint .",
     "preview": "vite preview",
